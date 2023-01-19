@@ -1,0 +1,7 @@
+project: c-vector
+target: c-vector-fuzzer
+
+cmds:
+  - cmd: /c-vector-fuzzer
+    libfuzzer: true
+
