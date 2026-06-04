@@ -5,6 +5,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifndef cvector_free_each_and_free
+#define cvector_free_each_and_free(vec, func) do { cvector_for_each((vec), (func)); cvector_free((vec)); } while (0)
+#endif
+
 
 // Convert to char *
 char *convert(uint8_t *a)
