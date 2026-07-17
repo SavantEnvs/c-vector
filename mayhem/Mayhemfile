@@ -1,0 +1,6 @@
+project: savantenvs/c-vector
+target: c-vector-fuzzer
+
+cmds:
+  - cmd: /mayhem/c-vector-fuzzer
+    libfuzzer: true
