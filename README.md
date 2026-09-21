@@ -113,11 +113,14 @@ int main(int argc, char *argv[]) {
 | [`v.push_back(value)`](https://en.cppreference.com/w/cpp/container/vector/push_back) | `cvector_push_back(v, value)` |
 | [`v.pop_back()`](https://en.cppreference.com/w/cpp/container/vector/pop_back) | `cvector_pop_back(v)` |
 | [`v.reserve(new_cap)`](https://en.cppreference.com/w/cpp/container/vector/reserve) | `cvector_reserve(v, new_cap)` |
-| [`v.resize(count)`](https://en.cppreference.com/w/cpp/container/vector/resize) | `cvector_resize(v, count)` |
+| [`v.resize(count, value)`](https://en.cppreference.com/w/cpp/container/vector/resize) | `cvector_resize(v, count, value)` |
 | [`v.data()`](https://en.cppreference.com/w/cpp/container/vector/data) | `cvector_data(v)` |
-| [`v.swap(other)`](https://en.cppreference.com/w/cpp/container/vector/swap) | `cvector_swap(v, other)` |
+| [`v.swap(other)`](https://en.cppreference.com/w/cpp/container/vector/swap) | `cvector_swap(v, other, int)` |
 | [`std::vector<int> other = v;`](https://en.cppreference.com/w/cpp/named_req/CopyConstructible) | `cvector(int) other; cvector_copy(v, other);` |
 
+`cvector_resize` requires a `value` argument to initialize any newly added elements.
+`cvector_swap` requires the element type as its third argument (`int` for the
+`cvector(int)` vectors shown above).
 
 ### Notes
 * If you like this library, [german-one](https://github.com/german-one) has created a string library using this approach: https://github.com/german-one/c-string
